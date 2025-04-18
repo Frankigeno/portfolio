@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./floater.css">
+    <title>Levorin Francesco</title>
+</head>
+<body>
+    <div class="loading-screen" id="loading-screen-id">
+        <img src="images/logo.svg" alt="" width="300px">
+    </div>
+    <div class="floating-menu" id="floating-menu-btn">
+        <span>Menu</span>
+    </div>
+    <div class="floating-screen" id="floating-screen-id">
+        <div class="container">
+            <div class="left">
+                <div><a href="">>Torna su</a></div>
+                <div><a href="">>Raccolta</a></div>
+                <div><a href="http://127.0.0.1:5500/website/contacts.html">>Contatti</a></div>
+            </div>
+            <div class="right">
+                <div><img src="images/logo.svg" alt=""></div>
+                <div><a href="https://www.instagram.com/francesco_levorin/">Instagram<</a></div>
+                <div><a href="https://www.facebook.com/frank.levo.100">Facebook<</a></div>
+                <div><a href="" onclick="alert('e che cazzo ne so')">perché mi prendi i dati?<</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="screen-container" id="chap-one">
+        <div class="center-container">
+        <span style="font-size: 5vw">Ciao, sono</span><br>
+        <span style="font-size: 13vw" class="special">Francesco</span>
+        </div>
+    </div>
+    <div class="screen-container" id="chap-two">
+        <div class="content-container">
+            <div class="floating">
+                <span class="big-title">Sono uno <span style="font-family: Nohemi-Bold;">studente di cinema</span> appassionato di:</span>
+            </div>
+            <div class="list">
+                <span id="el1" class="tracking-mouse-text">Fotografia</span>
+                <span id="el2" class="tracking-mouse-text">Videomaking</span>
+                <span id="el3" class="tracking-mouse-text">Videoediting</span>
+                <span id="el4" class="tracking-mouse-text">E di altre cose belle :)</span>
+            </div>
+        </div>
+    </div>
+    <div class="screen-container" id="chap-three">
+        <br>
+        <div class="content-container">
+            <div style="position: sticky; top: 50px; z-index: -1;">
+                <span class="big-title">Ecco alcuni <span style="font-family: Nohemi-Bold;">esempi</span>:</span>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="images/P1000213.webp" alt="">
+                    <img src="images/P1000250.webp" alt="">
+                </div>
+                <div class="column">
+                    <img src="images/P1000417.webp" alt="">
+                    <img src="images/P1000701.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="screen-container" id="chap-four">
+        <div class="left-container">
+                <span>Sono da sempre affascinato da come si possano trasmettere <span style="color: #C400FF;">sensazioni</span> attraverso le immagini.</span>
+        </div>
+        <div class="right-container">
+            <video autoplay muted loop id="video-venezia">
+                <source src="video/venezia.mp4" type="video/mp4" loading="lazy" preload="none">
+                Video non disponibile
+            </video>
+        </div>
+        <div class="btn-container">
+            <a href="">>Guarda altro!<</a>
+        </div>
+    </div>
+    <div class="screen-container" id="chap-five">
+        <div class="left-container">
+            <video autoplay muted loop>
+                <source src="video/drone.mp4" type="video/mp4" loading="lazy" preload="none">
+                Video non disponibile
+            </video>
+        </div>
+        <div class="right-container">
+            <span>Posso anche volare.</span><br>
+            <span style="color: white;font-size:calc(7px + 5vw);font-family: 'Nohemi-Thin';">Con il drone foto e riprese aeree non sono un problema!</span>
+        </div>
+    </div>
+    <div class="screen-container" id="chap-last">
+        <div class="left-container">
+            <div><span>Ti ho incuriosito?</span></div>
+            <br>
+            <div><a href="">>Scrivimi!*</a></div>
+        </div>
+        <div class="right-container">
+            <img src="https://media1.tenor.com/m/dxPl_UoR8J0AAAAd/fire-writing.gif" loading="lazy" alt="">
+            <div><span>*Rispondo volentieri ;)</span></div>
+        </div>
+    </div>
+    <footer id="page-footer">
+        <div class="upper">
+            <div class="left">
+                <div><a href="">>Torna su</a></div>
+                <div><a href="">>Raccolta</a></div>
+                <div><a href="http://127.0.0.1:5500/website/contacts.html">>Contatti</a></div>
+            </div>
+            <div>
+                <div class="right">
+                    <div><a href="https://www.instagram.com/francesco_levorin/">Instagram<</a></div>
+                    <div><a href="https://www.facebook.com/frank.levo.100">Facebook<</a></div>
+                    <div><a href="" onclick="alert('e che cazzo ne so')">perché mi prendi i dati?<</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <img src="images/logo2.svg" alt="">
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("loading-screen-id").style.animation = "loaded-animation 1s ease forwards";
+            document.getElementById("loading-screen-id").style.animationDelay = ".2s";
+        }, false);
+
+
+        let menuButton = document.getElementById("floating-menu-btn");
+        let menuScreen = document.getElementById("floating-screen-id");
+        let isShow = false;
+        menuButton.addEventListener("click", () => {
+            if (isShow)
+            {
+                menuScreen.style.animation = "menu-screen-to-hide 1s ease forwards";
+                isShow = false;
+            }
+            else
+            {
+                menuScreen.style.animation = "menu-transition-to-screen 1s ease forwards";
+                isShow = true;
+            }
+        });
+    </script>
+</body>
+</html>

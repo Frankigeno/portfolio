@@ -1,0 +1,116 @@
+.floating-menu
+{
+    position:fixed;
+	width:60px;
+	height:60px;
+	top:40px;
+	right:40px;
+    z-index: 200;
+    text-align: center;
+    mix-blend-mode: difference;
+}
+
+.floating-menu span
+{
+    color: white;
+    font-size: 30px;
+}
+
+.floating-screen
+{
+    position: fixed;
+    background-color: #FFB200;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 100;
+    transform: translateX(100%);
+}
+
+@keyframes menu-transition-to-screen
+{
+    from
+    {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+}
+
+@keyframes menu-screen-to-hide
+{
+    from
+    {
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+    to
+    {
+        transform: translateX(100%);
+        opacity: 0%;
+    }
+}
+
+.floating-screen .container
+{
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+    padding: 50px;
+}
+
+.floating-screen .left
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 40px;
+}
+
+.floating-screen .right
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    gap: 20px;
+}
+
+.floating-screen .left a
+{
+    font-size:calc(20px + 2vw);
+}
+.floating-screen .right a
+{
+    font-size:calc(15px + 1vw);
+}
+
+.loading-screen
+{
+    position: fixed;
+    background-color: #FFB200;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes loaded-animation
+{
+    from
+    {
+        transform: translateY(0%);
+    }
+    to
+    {
+        transform: translateY(-120%);
+    }
+}
