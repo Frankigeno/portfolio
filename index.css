@@ -52,44 +52,6 @@ html, body{
     background-image: url("./images/portrait.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    animation: reveal-portrait-anim ;
-    animation-timeline: scroll(root block);
-    animation-range: entry 0% exit 100%;
-}
-
-@media screen and (min-width: 1500px)
-{
-    @keyframes reveal-portrait-anim
-    {
-        from
-        {
-            background-position-y: -100px;
-            transform: scale(1);
-        }
-        to
-        {
-            background-position-y: -1400px;
-            transform: scale(2);
-        }
-    }
-}
-
-@media screen and (max-width: 1500px)
-{
-    @keyframes reveal-portrait-anim
-    {
-        from
-        {
-            transform: scale(1);
-            filter: blur(0px);
-        }
-        to
-        {
-            transform: scale(2);
-            filter: blur(5px);
-        }
-    }
 }
 
 .center-container
@@ -141,27 +103,6 @@ html, body{
 #chap-two .big-title
 {
     font-size:calc(15px + 5vw);
-    animation: list-title-anim;
-    animation-timeline: view();
-}
-
-@keyframes list-title-anim {
-    from
-    {
-        filter: blur(0px);
-        opacity: 0;
-    }
-
-    30%, 80%
-    {
-        filter: blur(0px);
-        opacity: 100%;
-    }
-
-    to
-    {
-        filter: blur(4px);
-    }
 }
 
 
@@ -187,91 +128,6 @@ html, body{
     
 }
 
-#chap-two .list #el1
-{
-    animation: list-el1-anim ease;
-    animation-timeline: view();
-    animation-range: entry 0% exit 100%;
-}
-@keyframes list-el1-anim
-{
-    from
-    {
-        transform: translateX(100%);
-    }
-    50%
-    {
-        transform: translateX(0%);
-    }
-    to
-    {
-        transform: translateX(-100%);
-    }
-}
-#chap-two .list #el2
-{
-    animation: list-el1-anim ease;
-    animation-timeline: view();
-    animation-range: entry 0% exit 100%;
-}
-@keyframes list-el2-anim
-{
-    from
-    {
-        transform: translateX(100%);
-    }
-    50%
-    {
-        transform: translateX(0%);
-    }
-    to
-    {
-        transform: translateX(-100%);
-    }
-}
-#chap-two .list #el3
-{
-    animation: list-el1-anim ease;
-    animation-timeline: view();
-    animation-range: entry 0% exit 100%;
-}
-@keyframes list-el3-anim
-{
-    from
-    {
-        transform: translateX(100%);
-    }
-    50%
-    {
-        transform: translateX(0%);
-    }
-    to
-    {
-        transform: translateX(-100%);
-    }
-}
-#chap-two .list #el4
-{
-    animation: list-el1-anim ease;
-    animation-timeline: view();
-    animation-range: entry 0% exit 100%;
-}
-@keyframes list-el4-anim
-{
-    from
-    {
-        transform: translateX(100%);
-    }
-    50%
-    {
-        transform: translateX(0%);
-    }
-    to
-    {
-        transform: translateX(-50%);
-    }
-}
-
 /*
     terza parte
 */
@@ -288,18 +144,6 @@ html, body{
     color: #D3F55B;
     font-size:calc(25px + 5vw);
     position: absolute;
-
-    animation: big-title-appear-anim;
-    animation-timeline: view();
-}
-
-@keyframes big-title-appear-anim {
-    from {
-        transform: translateY(-100%);
-    }
-    50%, to {
-        transform: translateY(0%);
-    }
 }
 
 #chap-three .row 
@@ -320,9 +164,10 @@ html, body{
     flex: 1 1 calc(50% - 5px); /* togli metà del gap per ogni colonna */
     box-sizing: border-box;
     padding: 0;
+    gap: 40px;
 }
 
-@media screen and (max-width: 1500px)
+@media screen and (max-width: 1200px)
 {
     #chap-three .row
     {
@@ -343,30 +188,6 @@ html, body{
 
     border: 2px solid black;
 
-    animation: grid-image-appear-anim ease;
-    animation-timeline: view();
-}
-
-@keyframes grid-image-appear-anim
-{
-    from, 20%
-    {
-        scale: 0.5;
-        filter: blur(5px);
-        transform: translateY(100%);
-    }
-    50%
-    {
-        scale: 1;
-        filter: blur(0px);
-        transform: translateY(0%);
-    }
-    to
-    {
-        scale: 0.8;
-        filter: blur(5px);
-        transform: translateY(-100%);
-    }
 }
 
 /*
@@ -377,114 +198,69 @@ html, body{
 {
     background-color: #D3F55B;
     padding: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     width: calc(100vw - 60px);
-    min-height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: fit-content;
+    gap: 50px;
 }
 
+#chap-four .btn-container
+{
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
-@media screen and (max-width: 1500px)
+@media screen and (max-width: 1200px)
 {   
     #chap-four .left-container
     {
         width: 100%;
-        position: block;
     }
     #chap-four .right-container
     {
         width: 100%;
-        position: block;
-    }
-    #chap-four .right-container video
-    {
-        margin-top: 50px;
     }
     #chap-four
     {
-        height: calc(100vh - 400px);
+        flex-direction: column;
+        padding: 30px;
     }
 }   
 
-@media screen and (min-width: 1500px)
+@media screen and (min-width: 1200px)
 {   
     #chap-four .left-container
     {
-        position: absolute;
-        width: 50%;
-        left: 30px;
+        width: 45%;
     }
     #chap-four .right-container
     {
-        position: absolute;
         width: 50%;
-        right: 30px;
-    }
-    #chap-four .right-container video
-    {
-        margin-top: 100px;
     }
 }
 
 #chap-four .left-container span
 {
-    font-size:calc(13px + 5vw);
+    font-size:calc(15px + 3vw);
 }
 
 #chap-four .left-container
 {
     z-index: 1;
-    background: #D3F55B;
-    background: linear-gradient(90deg,rgba(211, 245, 91, 1) 49%, rgba(255, 255, 255, 0) 100%);
-    animation: quote-text-anim;
-    animation-timeline: view();
-}
-
-@keyframes quote-text-anim {
-    from
-    {
-		transform: translateX(-100%) rotateX(90deg);
-	}
-	50%, 70%
-    {
-		transform: translateX(0%);
-        transform: rotateX(0deg);
-	}
 }
 
 #chap-four .right-container video
 {
     width: 100%;
     z-index: -1;
-
-    animation: video-appear-anim ease;
-    animation-timeline: view();
-    
-}
-
-@keyframes video-appear-anim 
-{
-    from
-    {
-        transform: translateX(100%);
-        box-shadow: 0px 0px 0px 0px rgba(196,0,255,0.55);
-    }
-    50%, 60%
-    {
-        transform: translateX(0%);
-        box-shadow: 0px 0px 74px 11px rgba(196,0,255,0.55);
-    }
-    to
-    {
-        box-shadow: 0px 0px 0px 0px rgba(196,0,255,0.55);
-    }
-}
-
-#chap-four .btn-container
-{
-    margin-top: 80px;
-    position: absolute;
-    bottom: 20px;
-    width: calc(100% - 60px);
-    text-align: center;
+    box-shadow: 0px 0px 70px 2px #c300ffa9;
 }
 
 /*
@@ -495,26 +271,30 @@ html, body{
 {
     padding: 30px;
     padding-top: 100px;
+    padding-bottom: 100px;
     width: calc(100vw - 60px);
-    height: calc(100vh - 100px);
+    display: flex;
+    height: fit-content;
+    justify-content: flex-start;
+    gap: 50px;
 }
 
 
-@media screen and (max-width: 1500px)
+@media screen and (max-width: 1200px)
 {   
     #chap-five .left-container
     {
         width: 100%;
-        position: block;
     }
     #chap-five .right-container
     {
         width: 100%;
-        position: block;
     }
     #chap-five
     {
-        height: calc(100vh - 500px);
+        padding-top: 50px;
+        flex-direction: column;
+        gap: 20px;
     }
     #chap-five .left-container video
     {
@@ -522,20 +302,15 @@ html, body{
     }
 }   
 
-@media screen and (min-width: 1500px)
+@media screen and (min-width: 1200px)
 {   
     #chap-five .left-container
     {
-        padding-top: 30px;
-        position: absolute;
         width: 50%;
-        left: 30px;
     }
     #chap-five .right-container
     {
-        position: absolute;
-        width: 40%;
-        right: 30px;
+        width: 35%;
     }
 }
 
@@ -543,51 +318,12 @@ html, body{
 {
     width: 100%;
     z-index: -1;
-
-    animation: video-drone-appear-anim ease;
-    animation-timeline: view();
-    
-}
-
-@keyframes video-drone-appear-anim
-{
-    from
-    {
-        transform: translateY(100%);
-        box-shadow: 0px 0px 0px 0px #D3F55B;
-    }
-    50%, 70%
-    {
-        transform: translateY(0%);
-        box-shadow: 0px 0px 50px 2px #D3F55B;
-    }
-    to
-    {
-        box-shadow: 0px 0px 0px 0px #D3F55B;
-    }
-}
-
-#chap-five .right-container
-{
-    animation: text-drone-appear-anim ease;
-    animation-timeline: view();
-}
-
-@keyframes text-drone-appear-anim
-{
-    from
-    {
-        transform: translateX(100%);
-    }
-    50%, 70%
-    {
-        transform: translateX(0%);
-    }
+    box-shadow: 0px 0px 20px 2px #d4f55b9a;
 }
 
 #chap-five .right-container span
 {
-    font-size:calc(13px + 5vw);
+    font-size:calc(15px + 3vw);
     color: #C400FF;
 }
 
@@ -600,7 +336,9 @@ html, body{
     background-color: #C400FF;
     padding: 30px;
     width: calc(100% - 60px);
-    height: 500px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
 }
 
 #chap-last span
@@ -611,7 +349,7 @@ html, body{
 
 #chap-last img
 {
-    width: 90%;
+    width: 80%;
     margin-top: 50px;
 }
 
@@ -621,53 +359,15 @@ html, body{
     color: #D3F55B;
 }
 
-#chap-last .left-container
-{
-    animation: text-last-appear-anim;
-    animation-timeline: view();
-}
-
-@keyframes text-last-appear-anim
-{
-    from
-    {
-        transform: translateX(-100%);
-    }
-    30%
-    {
-        transform: translateX(0%);
-    }
-}
-
-#chap-last .right-container
-{
-    animation: meme-last-appear-anim;
-    animation-timeline: view();
-}
-
-@keyframes meme-last-appear-anim
-{
-    from
-    {
-        transform: translateY(100%);
-    }
-    50%
-    {
-        transform: translateY(0%);
-    }
-}
-
-@media screen and (max-width: 1500px)
+@media screen and (max-width: 1200px)
 {   
     #chap-last .left-container
     {
         width: 100%;
-        position: block;
     }
     #chap-last .right-container
     {
-        width: 100%;
-        position: block;
+        width: 70%;
     }
     #chap-last a
     {
@@ -675,24 +375,20 @@ html, body{
     }
     #chap-last
     {
-        height: fit-content;
+        flex-direction: column;
     }
 }   
 
-@media screen and (min-width: 1500px)
+@media screen and (min-width: 1200px)
 {   
     #chap-last .left-container
     {
         padding-top: 30px;
-        position: absolute;
         width: 50%;
-        left: 40px;
     }
     #chap-last .right-container
     {
-        position: absolute;
-        width: 40%;
-        right: 40px;
+        width: 30%;
     }
 }
 

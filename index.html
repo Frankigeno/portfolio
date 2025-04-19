@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./floater.css">
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <title>Levorin Francesco</title>
 </head>
-<body>
+<body style="background-color: black;">
     <div class="loading-screen" id="loading-screen-id">
         <img src="images/logo.svg" alt="" width="300px">
     </div>
@@ -20,7 +22,7 @@
             <div class="left">
                 <div><a href="">>Torna su</a></div>
                 <div><a href="">>Raccolta</a></div>
-                <div><a href="http://127.0.0.1:5500/website/contacts.html">>Contatti</a></div>
+                <div><a href="/contacts.html">>Contatti</a></div>
             </div>
             <div class="right">
                 <div><img src="images/logo.svg" alt=""></div>
@@ -32,8 +34,8 @@
     </div>
     <div class="screen-container" id="chap-one">
         <div class="center-container">
-        <span style="font-size: 5vw">Ciao, sono</span><br>
-        <span style="font-size: 13vw" class="special">Francesco</span>
+            <span style="font-size: 5vw">Ciao, sono</span><br>
+            <span style="font-size: 13vw" class="special">Francesco</span>
         </div>
     </div>
     <div class="screen-container" id="chap-two">
@@ -57,12 +59,12 @@
             </div>
             <div class="row">
                 <div class="column">
-                    <img src="images/P1000213.webp" alt="">
-                    <img src="images/P1000250.webp" alt="">
+                    <img src="images/P1000213.webp" alt="" id="el1">
+                    <img src="images/P1000250.webp" alt="" id="el2">
                 </div>
                 <div class="column">
-                    <img src="images/P1000417.webp" alt="">
-                    <img src="images/P1000701.webp" alt="">
+                    <img src="images/P1000417.webp" alt="" id="el3">
+                    <img src="images/P1000701.webp" alt="" id="el4">
                 </div>
             </div>
         </div>
@@ -72,8 +74,8 @@
                 <span>Sono da sempre affascinato da come si possano trasmettere <span style="color: #C400FF;">sensazioni</span> attraverso le immagini.</span>
         </div>
         <div class="right-container">
-            <video autoplay muted loop id="video-venezia">
-                <source src="video/venezia.mp4" type="video/mp4" loading="lazy" preload="none">
+            <video autoplay muted loop id="video-venezia" controls>
+                <source src="video/venezia.mp4" type="video/mp4" loading="lazy">
                 Video non disponibile
             </video>
         </div>
@@ -83,14 +85,14 @@
     </div>
     <div class="screen-container" id="chap-five">
         <div class="left-container">
-            <video autoplay muted loop>
-                <source src="video/drone.mp4" type="video/mp4" loading="lazy" preload="none">
+            <video autoplay muted loop controls>
+                <source src="video/drone.mp4" type="video/mp4">
                 Video non disponibile
             </video>
         </div>
         <div class="right-container">
             <span>Posso anche volare.</span><br>
-            <span style="color: white;font-size:calc(7px + 5vw);font-family: 'Nohemi-Thin';">Con il drone foto e riprese aeree non sono un problema!</span>
+            <span style="color: white;font-family: 'Nohemi-Thin';">Con il drone foto e riprese aeree non sono un problema!</span>
         </div>
     </div>
     <div class="screen-container" id="chap-last">
@@ -108,8 +110,8 @@
         <div class="upper">
             <div class="left">
                 <div><a href="">>Torna su</a></div>
-                <div><a href="">>Raccolta</a></div>
-                <div><a href="http://127.0.0.1:5500/website/contacts.html">>Contatti</a></div>
+                <div><a href="">>Portfolio</a></div>
+                <div><a href="/contacts.html">>Contatti</a></div>
             </div>
             <div>
                 <div class="right">
@@ -123,28 +125,7 @@
             <img src="images/logo2.svg" alt="">
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById("loading-screen-id").style.animation = "loaded-animation 1s ease forwards";
-            document.getElementById("loading-screen-id").style.animationDelay = ".2s";
-        }, false);
-
-
-        let menuButton = document.getElementById("floating-menu-btn");
-        let menuScreen = document.getElementById("floating-screen-id");
-        let isShow = false;
-        menuButton.addEventListener("click", () => {
-            if (isShow)
-            {
-                menuScreen.style.animation = "menu-screen-to-hide 1s ease forwards";
-                isShow = false;
-            }
-            else
-            {
-                menuScreen.style.animation = "menu-transition-to-screen 1s ease forwards";
-                isShow = true;
-            }
-        });
-    </script>
+    <script src="index.js"></script>
+    <script src="floater.js"></script>
 </body>
 </html>
