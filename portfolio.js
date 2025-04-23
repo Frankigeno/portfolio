@@ -43,7 +43,7 @@ async function appendImages(imageIndex)
         let element = imageIndex[i];
         let imageElement = document.createElement("img");
         
-        imageElement.src = "/display_media/result/" + element["image"];
+        imageElement.src = "/displaymedia/result/" + element["image"];
         imageElement.loading = "lazy";
 
         imageElement.onclick = () => {
@@ -58,7 +58,7 @@ async function appendImages(imageIndex)
     }
 }
 
-fetch('./display_media/index.json')
+fetch('./displaymedia/index.json')
     .then((response) => response.json())
     .then((json) => appendImages(json));
 
