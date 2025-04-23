@@ -3,7 +3,7 @@ let isViewerShwn = false;
 
 function showImage(imageNumber)
 {
-    document.getElementById("img-viewer").src = "/display_media/result/" + imageMainIndex[imageNumber]["image"];
+    document.getElementById("img-viewer").src = "./display_media/result/" + imageMainIndex[imageNumber]["image"];
     document.getElementById("images-viewer-container").style.scale = "100%";
     document.getElementById("camera-body").innerHTML = imageMainIndex[imageNumber]["camera"];
     document.getElementById("camera-lens").innerHTML = imageMainIndex[imageNumber]["lens"];
