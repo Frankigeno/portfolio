@@ -58,7 +58,7 @@ async function appendImages(imageIndex)
     }
 }
 
-fetch('https://frankigeno.github.io/portfolio/displaymedia/result/')
+fetch('./displaymedia/index.json')
     .then((response) => response.json())
     .then((json) => appendImages(json));
 
