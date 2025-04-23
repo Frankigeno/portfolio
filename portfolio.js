@@ -3,7 +3,7 @@ let isViewerShwn = false;
 
 function showImage(imageNumber)
 {
-    document.getElementById("img-viewer").src = "displaymedia/result/" + imageMainIndex[imageNumber]["image"];
+    document.getElementById("img-viewer").src = "https://frankigeno.github.io/portfolio/displaymedia/result/" + imageMainIndex[imageNumber]["image"];
     document.getElementById("images-viewer-container").style.scale = "100%";
     document.getElementById("camera-body").innerHTML = imageMainIndex[imageNumber]["camera"];
     document.getElementById("camera-lens").innerHTML = imageMainIndex[imageNumber]["lens"];
@@ -43,7 +43,7 @@ async function appendImages(imageIndex)
         let element = imageIndex[i];
         let imageElement = document.createElement("img");
         
-        imageElement.src = "/displaymedia/result/" + element["image"];
+        imageElement.src = "https://frankigeno.github.io/portfolio/displaymedia/result/" + element["image"];
         imageElement.loading = "lazy";
 
         imageElement.onclick = () => {
@@ -58,7 +58,7 @@ async function appendImages(imageIndex)
     }
 }
 
-fetch('./displaymedia/index.json')
+fetch('https://frankigeno.github.io/portfolio/displaymedia/result/')
     .then((response) => response.json())
     .then((json) => appendImages(json));
 
