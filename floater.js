@@ -9,12 +9,12 @@ let isShow = false;
 menuButton.addEventListener("click", () => {
     if (isShow)
     {
-        menuScreen.style.animation = "menu-screen-to-hide 1s ease forwards";
+        menuScreen.style.animation = "menu-screen-to-hide .4s ease forwards";
         isShow = false;
     }
     else
     {
-        menuScreen.style.animation = "menu-transition-to-screen 1s ease forwards";
+        menuScreen.style.animation = "menu-transition-to-screen .4s ease forwards";
         isShow = true;
     }
 });

@@ -1,0 +1,123 @@
+body
+{
+    background-color: #D3F55B;
+}
+.header-container
+{
+    background-color: #D3F55B;
+    padding: 20px;
+    min-height: 60px;
+}
+.header-container .title-container span
+{
+    font-size: 60px;
+    font-family: "Nohemi-Bold";
+}
+.main-container
+{
+    min-height: 100vh;
+    height: fit-content;
+    background-color: black;
+}
+
+.image-grid-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    justify-content: flex-start;
+}
+
+.main-container .image-element
+{
+    width: calc((100% - 30px) / 4);
+    height: 20vw;
+}
+
+@media screen and (max-width: 900px)
+{
+    .main-container .image-element
+    {
+        width: calc((100% - 10px) / 2);
+        height: 40vw;
+    }
+}
+
+.main-container .image-element img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.main-container .image-element img:hover
+{
+    cursor: pointer;
+}
+
+.image-viewer-container
+{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 0;
+    transition: .2s ease;
+    z-index: 90;
+}
+.image-viewer
+{
+    padding: 10px;
+    background-color: rgb(228, 228, 228);
+    max-width: 1000px;
+    width: calc(100%-20px);
+    color: black;
+    box-shadow: 0px 0px 105px 40px rgba(0,0,0,1);
+    display: flex;
+    flex-direction: column;
+}
+.image-viewer img
+{
+    max-width: 100%;
+    max-height: 90vh; /* o quello che preferisci, evita che esca fuori dallo schermo */
+    object-fit: contain;
+    border: .5px solid black;
+}
+
+.image-viewer .details-container
+{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main-video-container
+{
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    gap: 15px;
+}
+
+.main-video-container .video-container
+{
+    width: 600px;
+    max-width: 100%;
+    aspect-ratio: 4/3;
+}
+
+@media screen and (max-width: 900px)
+{
+    .main-video-container
+    {
+        flex-direction: column;
+    }
+}

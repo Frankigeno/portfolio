@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Nohemi-Thin";
+    src: url("./font/Nohemi-Thin.ttf");
+}
+@font-face {
+    font-family: "Nohemi-Light";
+    src: url("./font/Nohemi-Light.ttf");
+}
+@font-face {
+    font-family: "Nohemi-Regular";
+    src: url("./font/Nohemi-Regular.ttf");
+}
+@font-face {
+    font-family: "Nohemi-Bold";
+    src: url("./font/Nohemi-Bold.ttf");
+}
+
+*
+{
+    margin: 0;
+    padding: 0%;
+    font-family: "Nohemi-Light";
+}
+
+html 
+{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}

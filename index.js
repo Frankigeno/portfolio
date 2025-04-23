@@ -107,14 +107,13 @@ for (let index = 1; index <= 4; index++)
     {
         scale:1,
         y: "0%",
-        filter: "blur(0px)",
         duration: 0.6
     }
     );
     tl.to("#chap-three #el" + index,
     { 
-        filter: "blur(3px)",
-        duration: 0.25
+      scale:0.8,
+      duration: 0.25
     }
     );
 }

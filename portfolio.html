@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./portfolio.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="floater.css">
+    <title>Portfolio | Levorin Francesco</title>
+</head>
+<body>
+    <div class="loading-screen" id="loading-screen-id">
+        <img src="images/logo.svg" alt="" width="300px">
+    </div>
+    <div class="floating-menu" id="floating-menu-btn">
+        <span>Menu</span>
+    </div>
+    <div class="floating-screen" id="floating-screen-id">
+        <div class="container">
+            <div class="left">
+                <div><a href="/portfolio/index.html">>Home</a></div>
+                <div><a href="">>Vai su</a></div>
+                <div><a href="/portfolio/contacts.html">>Contatti</a></div>
+            </div>
+            <div class="right">
+                <div><img src="images/logo.svg" alt=""></div>
+                <div><a href="https://www.instagram.com/francesco_levorin/">Instagram<</a></div>
+                <div><a href="https://www.facebook.com/frank.levo.100">Facebook<</a></div>
+                <div><a href="" onclick="alert('e che cazzo ne so')">perché mi prendi i dati?<</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-container">
+        <div class="title-container">
+            <span>Portfolio.</span>
+        </div>
+    </div>
+    <div class="main-video-container">
+        <div class="video-container">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vCC_8hXAhpE?si=TvdcsT3A-gChSpv2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=nih2ZCrKXE9K9yFh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="image-viewer-container" onclick="setLink(-1)" id="images-viewer-container">
+        <div class="image-viewer">
+            <img alt="" id="img-viewer">
+            <div class="details-container">
+                <span id="camera-body">Corpo macchina</span>
+                <span id="camera-lens">Obiettivo</span>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="image-grid-container" id="image-container">
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="upper">
+            <div class="left">
+                <div><a href="/portfolio/index.html">>Home</a></div>
+                <div><a href="">>Vai su</a></div>
+                <div><a href="/portfolio/contacts.html">>Contatti</a></div>
+            </div>
+            <div>
+                <div class="right">
+                    <div><a href="https://www.instagram.com/francesco_levorin/">Instagram<</a></div>
+                    <div><a href="https://www.facebook.com/frank.levo.100">Facebook<</a></div>
+                    <div><a href="" onclick="alert('e che cazzo ne so')">perché mi prendi i dati?<</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <img src="images/logo2.svg" alt="">
+        </div>
+    </footer>
+    <script src="floater.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("loading-screen-id").style.animation = "loaded-animation 1s ease forwards";
+            document.getElementById("loading-screen-id").style.animationDelay = ".2s";
+        }, false);
+    </script>
+    <script src="./portfolio.js"></script>
+</body>
+</html>
